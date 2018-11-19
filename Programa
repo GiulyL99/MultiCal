@@ -1,26 +1,26 @@
 
 /definindo os pinos do display de catodo comum
 
-const int a1 = 13;
-const int b1 = 12;
-const int c1 = 11;
-const int d1 = 10;
-const int e1 = 9;
-const int f1 = 8;
-const int G1 = 7;
+const int A = 13;
+const int B = 12;
+const int C = 11;
+const int D = 10;
+const int E = 9;
+const int F = 8;
+const int G = 7;
 
 /definindo os pinos do display de anodo comum
  
-const int A2= 6;
-const int b2 = 5;
-const int c2 = 4;
-const int d2 = 3;
-const int e2 = 2;
-const int f2 = 1;
-const int g2 = 0;
+const int A= 6;
+const int B = 5;
+const int C = 4;
+const int D = 3;
+const int E = 2;
+const int F = 1;
+const int G = 0;
  
-/definindo os pinos dos botıes 1 e 2
-const int Bot„o1 = A0;
+/definindo os pinos dos bot√µes 1 e 2
+const int Bot√£o1 = A0;
 const int Botao2 = A2;
 int EstadoBotao1 = 0;
 int EstadoBotao2 = 0;
@@ -59,11 +59,9 @@ while( i < 10){
     else{
         return i;
         break;      
-  
-    }
+   }
     
 }
-
 while(j < 10){   
     if(EstadoBotao2 == HIGH){
       j = j + 1
@@ -175,94 +173,94 @@ if(decimal == 9){
 }
 
 if(unidade == 0){
-  digitalWrite(13,HIGH);
-  digitalWrite(12,HIGH);
-  digitalWrite(11,HIGH);
-  digitalWrite(10,HIGH);
-  digitalWrite(9,HIGH);
-  digitalWrite(8,HIGH);
-  digitalWrite(7,Low);
+  digitalWrite(6,HIGH);
+  digitalWrite(5,HIGH);
+  digitalWrite(4,HIGH);
+  digitalWrite(3,HIGH);
+  digitalWrite(2,HIGH);
+  digitalWrite(1,HIGH);
+  digitalWrite(0,Low);
 }
 if(unidade == 1){
-  digitalWrite(13,LOW);
-  digitalWrite(12,HIGH);
-  digitalWrite(11,HIGH);
-  digitalWrite(10,LOW);
-  digitalWrite(9,LOW);
-  digitalWrite(8,LOW);
-  digitalWrite(7,Low);
+  digitalWrite(6,LOW);
+  digitalWrite(5,HIGH);
+  digitalWrite(4,HIGH);
+  digitalWrite(3,LOW);
+  digitalWrite(2,LOW);
+  digitalWrite(1,LOW);
+  digitalWrite(0,Low);
 }
 if(unidade == 2){
-  digitalWrite(13,HIGH);
-  digitalWrite(12,HIGH);
-  digitalWrite(11,LOW);
-  digitalWrite(10,HIGH);
-  digitalWrite(9,HIGH);
-  digitalWrite(8,LOW);
-  digitalWrite(7,HIGH);
+  digitalWrite(6,HIGH);
+  digitalWrite(5,HIGH);
+  digitalWrite(4,LOW);
+  digitalWrite(3,HIGH);
+  digitalWrite(2,HIGH);
+  digitalWrite(1,LOW);
+  digitalWrite(0,HIGH);
 }
 if(unidade == 3){
-  digitalWrite(13,HIGH);
-  digitalWrite(12,HIGH);
-  digitalWrite(11,HIGH);
-  digitalWrite(10,HIGH);
-  digitalWrite(9,LOW);
-  digitalWrite(8,LOW);
-  digitalWrite(7,HIGH);
+  digitalWrite(6,HIGH);
+  digitalWrite(5,HIGH);
+  digitalWrite(4,HIGH);
+  digitalWrite(3,HIGH);
+  digitalWrite(2,LOW);
+  digitalWrite(1,LOW);
+  digitalWrite(0,HIGH);
 }
 if(unidade == 4){
-  digitalWrite(13,LOW);
-  digitalWrite(12,HIGH);
-  digitalWrite(11,HIGH);
-  digitalWrite(10,LOW);
-  digitalWrite(9,LOW);
-  digitalWrite(8,HIGH);
-  digitalWrite(7,HIGH);
+  digitalWrite(6,LOW);
+  digitalWrite(5,HIGH);
+  digitalWrite(4,HIGH);
+  digitalWrite(3,LOW);
+  digitalWrite(2,LOW);
+  digitalWrite(1,HIGH);
+  digitalWrite(0,HIGH);
 }
 if(unidade == 5){
-  digitalWrite(13,HIGH);
-  digitalWrite(12,LOW);
-  digitalWrite(11,HIGH);
-  digitalWrite(10,HIGH);
-  digitalWrite(9,LOW);
-  digitalWrite(8,HIGH);
-  digitalWrite(7,HIGH);
+  digitalWrite(6,HIGH);
+  digitalWrite(5,LOW);
+  digitalWrite(4,HIGH);
+  digitalWrite(3,HIGH);
+  digitalWrite(2,LOW);
+  digitalWrite(1,HIGH);
+  digitalWrite(0,HIGH);
 }
 if(unidade == 6){
-  digitalWrite(13,LOW);
-  digitalWrite(12,LOW);
-  digitalWrite(11,HIGH);
-  digitalWrite(10,HIGH);
-  digitalWrite(9,HIGH);
-  digitalWrite(8,HIGH);
-  digitalWrite(7,HIGH);
+  digitalWrite(6,LOW);
+  digitalWrite(5,LOW);
+  digitalWrite(4,HIGH);
+  digitalWrite(3,HIGH);
+  digitalWrite(2,HIGH);
+  digitalWrite(1,HIGH);
+  digitalWrite(0,HIGH);
 }
 if(unidade == 7){
-  digitalWrite(13,HIGH);
-  digitalWrite(12,HIGH);
-  digitalWrite(11,HIGH);
-  digitalWrite(10,LOW);
-  digitalWrite(9,LOW);
-  digitalWrite(8,LOW);
-  digitalWrite(7,Low);
+  digitalWrite(6,HIGH);
+  digitalWrite(5,HIGH);
+  digitalWrite(4,HIGH);
+  digitalWrite(3,LOW);
+  digitalWrite(2,LOW);
+  digitalWrite(1,LOW);
+  digitalWrite(0,Low);
 }
 if(unidade == 8){
-  digitalWrite(13,HIGH);
-  digitalWrite(12,HIGH);
-  digitalWrite(11,HIGH);
-  digitalWrite(10,HIGH);
-  digitalWrite(9,HIGH);
-  digitalWrite(8,HIGH);
-  digitalWrite(7,HIGH);
+  digitalWrite(6,HIGH);
+  digitalWrite(5,HIGH);
+  digitalWrite(4,HIGH);
+  digitalWrite(3,HIGH);
+  digitalWrite(2,HIGH);
+  digitalWrite(1,HIGH);
+  digitalWrite(0,HIGH);
 }
 if(unidade == 9){
-  digitalWrite(13,HIGH);
-  digitalWrite(12,HIGH);
-  digitalWrite(11,HIGH);
-  digitalWrite(10,LOW);
-  digitalWrite(9,LOW);
-  digitalWrite(8,HIGH);
-  digitalWrite(7,HIGH);
+  digitalWrite(6,HIGH);
+  digitalWrite(5,HIGH);
+  digitalWrite(4,HIGH);
+  digitalWrite(3,LOW);
+  digitalWrite(2,LOW);
+  digitalWrite(1,HIGH);
+  digitalWrite(0,HIGH);
 }
 
     
