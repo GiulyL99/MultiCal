@@ -64,22 +64,22 @@ while( i < 10){
 }
 while(j < 10){   
     if(EstadoBotao2 == HIGH){
-      j = j + 1
-      return j
-      delay(1000)
+      j = j + 1;
+      return j;
+      delay(1000);
     }
     else{
         return j;
-        break
+        break;
     }
 }
 int f(){
-   k = j - 1
-   h = i - 1
-   multi = k*h
-   decimal= int  multi/10
-   unidade= multi-(decimal)*10
-   return  decimal, int unidade
+   k = j - 1;
+   h = i - 1;
+   multi = k*h;
+   decimal= int  multi/10;
+   unidade= multi-(decimal)*10;
+   return  decimal, int unidade;
 
 if(decimal == 0){
   digitalWrite(13,HIGH);
@@ -261,6 +261,7 @@ if(unidade == 9){
   digitalWrite(2,LOW);
   digitalWrite(1,HIGH);
   digitalWrite(0,HIGH);
+}
 }
 
     
