@@ -1,0 +1,271 @@
+
+/definindo os pinos do display de catodo comum
+
+const int a1 = 13;
+const int b1 = 12;
+const int c1 = 11;
+const int d1 = 10;
+const int e1 = 9;
+const int f1 = 8;
+const int G1 = 7;
+
+/definindo os pinos do display de anodo comum
+ 
+const int A2= 6;
+const int b2 = 5;
+const int c2 = 4;
+const int d2 = 3;
+const int e2 = 2;
+const int f2 = 1;
+const int g2 = 0;
+ 
+/definindo os pinos dos botões 1 e 2
+const int Botão1 = A0;
+const int Botao2 = A2;
+int EstadoBotao1 = 0;
+int EstadoBotao2 = 0;
+
+voide setup(){
+pinMode(A0,INPUT);
+pinMode(A3,INPUT);
+
+pinMOde(13,OUTPUT);
+pinMOde(12,OUTPUT);
+pinMode(11,OUTPUT);
+pinMode(10,OUTPUT);
+pinMode(9,OUTPUT);
+pinMode(8,OUTPUT);
+pinMode(7,OUTPUT);
+
+pinMOde(6,OUTPUT);
+pinMOde(5,OUTPUT);
+pinMode(4,OUTPUT);
+pinMode(3,OUTPUT);
+pinMode(2,OUTPUT);
+pinMode(1,OUTPUT);
+pinMode(0,OUTPUT);
+}
+void loop(){
+EstadoBotao1 = digitalRead(Botao1);
+EstadoBotao2 = digitalRead(Botao2);
+int i = 0;
+int j = 0;
+while( i < 10){
+    if(EstadoBotao1 == HIGH){
+       i = i + 1;
+       return i;
+       delay(1000);
+    }
+    else{
+        return i;
+        break;      
+  
+    }
+    
+}
+
+while(j < 10){   
+    if(EstadoBotao2 == HIGH){
+      j = j + 1
+      return j
+      delay(1000)
+    }
+    else{
+        return j;
+        break
+    }
+}
+int f(){
+   k = j - 1
+   h = i - 1
+   multi = k*h
+   decimal= int  multi/10
+   unidade= multi-(decimal)*10
+   return  decimal, int unidade
+
+if(decimal == 0){
+  digitalWrite(13,HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,HIGH);
+  digitalWrite(9,HIGH);
+  digitalWrite(8,HIGH);
+  digitalWrite(7,Low);
+}
+if(decimal == 1){
+  digitalWrite(13,LOW);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,LOW);
+  digitalWrite(9,LOW);
+  digitalWrite(8,LOW);
+  digitalWrite(7,Low);
+}
+if(decimal == 2){
+  digitalWrite(13,HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,LOW);
+  digitalWrite(10,HIGH);
+  digitalWrite(9,HIGH);
+  digitalWrite(8,LOW);
+  digitalWrite(7,HIGH);
+}
+if(decimal == 3){
+  digitalWrite(13,HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,HIGH);
+  digitalWrite(9,LOW);
+  digitalWrite(8,LOW);
+  digitalWrite(7,HIGH);
+}
+if(decimal == 4){
+  digitalWrite(13,LOW);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,LOW);
+  digitalWrite(9,LOW);
+  digitalWrite(8,HIGH);
+  digitalWrite(7,HIGH);
+}
+if(decimal == 5){
+  digitalWrite(13,HIGH);
+  digitalWrite(12,LOW);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,HIGH);
+  digitalWrite(9,LOW);
+  digitalWrite(8,HIGH);
+  digitalWrite(7,HIGH);
+}
+if(decimal == 6){
+  digitalWrite(13,LOW);
+  digitalWrite(12,LOW);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,HIGH);
+  digitalWrite(9,HIGH);
+  digitalWrite(8,HIGH);
+  digitalWrite(7,HIGH);
+}
+if(decimal == 7){
+  digitalWrite(13,HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,LOW);
+  digitalWrite(9,LOW);
+  digitalWrite(8,LOW);
+  digitalWrite(7,Low);
+}
+if(decimal == 8){
+  digitalWrite(13,HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,HIGH);
+  digitalWrite(9,HIGH);
+  digitalWrite(8,HIGH);
+  digitalWrite(7,HIGH);
+}
+if(decimal == 9){
+  digitalWrite(13,HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,LOW);
+  digitalWrite(9,LOW);
+  digitalWrite(8,HIGH);
+  digitalWrite(7,HIGH);
+}
+
+if(unidade == 0){
+  digitalWrite(13,HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,HIGH);
+  digitalWrite(9,HIGH);
+  digitalWrite(8,HIGH);
+  digitalWrite(7,Low);
+}
+if(unidade == 1){
+  digitalWrite(13,LOW);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,LOW);
+  digitalWrite(9,LOW);
+  digitalWrite(8,LOW);
+  digitalWrite(7,Low);
+}
+if(unidade == 2){
+  digitalWrite(13,HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,LOW);
+  digitalWrite(10,HIGH);
+  digitalWrite(9,HIGH);
+  digitalWrite(8,LOW);
+  digitalWrite(7,HIGH);
+}
+if(unidade == 3){
+  digitalWrite(13,HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,HIGH);
+  digitalWrite(9,LOW);
+  digitalWrite(8,LOW);
+  digitalWrite(7,HIGH);
+}
+if(unidade == 4){
+  digitalWrite(13,LOW);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,LOW);
+  digitalWrite(9,LOW);
+  digitalWrite(8,HIGH);
+  digitalWrite(7,HIGH);
+}
+if(unidade == 5){
+  digitalWrite(13,HIGH);
+  digitalWrite(12,LOW);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,HIGH);
+  digitalWrite(9,LOW);
+  digitalWrite(8,HIGH);
+  digitalWrite(7,HIGH);
+}
+if(unidade == 6){
+  digitalWrite(13,LOW);
+  digitalWrite(12,LOW);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,HIGH);
+  digitalWrite(9,HIGH);
+  digitalWrite(8,HIGH);
+  digitalWrite(7,HIGH);
+}
+if(unidade == 7){
+  digitalWrite(13,HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,LOW);
+  digitalWrite(9,LOW);
+  digitalWrite(8,LOW);
+  digitalWrite(7,Low);
+}
+if(unidade == 8){
+  digitalWrite(13,HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,HIGH);
+  digitalWrite(9,HIGH);
+  digitalWrite(8,HIGH);
+  digitalWrite(7,HIGH);
+}
+if(unidade == 9){
+  digitalWrite(13,HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,LOW);
+  digitalWrite(9,LOW);
+  digitalWrite(8,HIGH);
+  digitalWrite(7,HIGH);
+}
+
+    
+
+    
+
