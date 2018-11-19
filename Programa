@@ -58,19 +58,15 @@ while( i < 10){
     }
     else{
         return i;
-        break;      
-   }
-    
-}
-while(j < 10){   
-    if(EstadoBotao2 == HIGH){
-      j = j + 1;
-      return j;
-      delay(1000);
-    }
-    else{
-        return j;
-        break;
+        while(j < 10){   
+            if(EstadoBotao2 == HIGH){
+                 j = j + 1;
+                 return j;
+                 delay(1000);
+             }
+             else{
+                 return j;
+                 break;
     }
 }
 int f(){
