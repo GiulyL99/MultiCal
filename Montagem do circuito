@@ -1,0 +1,46 @@
+Nesse circuito será necessario os seguintes materias:
+  -Dois botoes push-up de 4 pinos( botão 1 e botão 2)
+  -Um display de 7 segmentos de anodo comum
+  -Um display de 7 segmentos de catodo comum
+  - Jumpers
+  -((Opcional)) Dois resistores de 300 ohms
+  -((Opcional)) Uma protoboard
+Obs:Na atividade não consta resistores, mas achei que seria uma boa ideia colocar resistores nos terminais GND e Vcc do display de catodo comum
+ e de anodo comum,respectivamente.Mas como consta só é opcional.A protoboard é para testar o circuito antes de soldar,para ver se ter algum 
+ erro na programação ou na montagem,sem desgastar os componentes.
+
+Irei dividir a montagem por componente:
+1-Protoboard 
+      Para alimentar a protoboard é necessario conectar o seu negativo ao GND do arduino e o seu positivo ao 5V do arduino.Se o seu protoboard
+ não tiver o desenho de mais ou menos, é necessario que você use as duas primeiras linhas superiores ou inferiores, para alimentar o circuito.
+ Atenção ao escolher a linha e conectar o 5V e o GND do arduino em linhas distintas.Vou considerar a linha conectada a 5V como linha5V e a linha
+ conectada ao GND como linhaGnd.
+2-Display Led de 7 segmentos de catodo comum
+      Sabemos que esse display apresenta 10 terminais,como visto pelo esquema da atividade, sendo que dois(representado pelo Gnd) são os terminais
+ catodos desse display.É necessario conectar um desses a um furo da linhaGnd que você a fim de ocorrer a alimentação do display.Vale ressaltar
+ que é totalmente opcional a escolha de qual pino do Gnd do display você irá escolher,pois eles são ligados internamente no display.
+ Os demais pinos (a,b,c,d,e,f,g) serão ligados em portas digitais da plataforma do arduino,sendo que escolhi posiciona-los nas portas 13,12,
+ 11,10,9,8,7 respectivamente.Nota-se que escolhi optar por não conectar o pino dp,pois ele não será necessario para os fins desse circuito.
+ 
+3-Display Led de 7 segmentos de anodo comum
+      Sabemos que esse display apresenta 10 terminais,como visto pelo esquema da atividade, sendo que dois(representado por Vcc) são os 
+ terminais ânodos desse display.É necessario conectar um desses terminais em um fur do da linha5V a fim de ocorrer a alimentação do display.
+ Vale ressaltar que é totalmente opcional a escolha de qual pino VCC do display você irá escolher,pois eles são ligados internamente no display.
+ Os demais pinos (a,b,c,d,e,f,g) serão ligados em portas digitais da plataforma do arduino,sendo que escolhi posiciona-los nas portas 
+ 6,5,4,3,2,1,0 respectivamente.Nota-se que escolhi optar por não conectar o pino dp, pois ele não será necessario para os fins desse 
+ circuito.
+4- Os dois botoes de quatro pinos(botão 1 e botão 2)
+      A arquitetura de ambos é igual,então coloquei no mesmo item.Vale ressaltar que os dois pinos de cada lado já estão conectados,internamente,
+ então só é necessario conectar um terminal ao arduino, sendo que eu escolhi o terminal A0 e A3, para o botao 1 e botao 2,respectivamente.
+ É opcional o par que você vai escolher para conectar ao terminal do arduino a fim de informar o programa.Vale ressaltar que os terminais 
+ escolhidos são analogicos,mas isso não irá afetar o funcionamento desse circuito.Para alimentação, conectar um pino, do par que 
+ ainda não esta conectado ao arduino,a linha 5V.Sendo que essa ação deve ser feita para os dois botões.
+      
+5-((Opcional))Os dois resistores:
+     Conecta um resistor no terminal GND que você pretende conectar no arduino, do Display de catodo comum, para proteger o display de
+ eventualidades.Conectar o outro resistor no pino VCC que você pretende conectar no arduino,do Display de anodo comum, para proteger
+ o display de eventualidade.
+ 
+ 
+     
+    
