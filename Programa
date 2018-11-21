@@ -1,5 +1,5 @@
 
-/definindo os pinos do display de catodo comum
+//definindo os pinos do display de catodo comum
 
 const int A = 13;
 const int B = 12;
@@ -9,7 +9,7 @@ const int E = 9;
 const int F = 8;
 const int G = 7;
 
-/definindo os pinos do display de anodo comum
+//definindo os pinos do display de anodo comum
  
 const int A= 6;
 const int B = 5;
@@ -19,16 +19,17 @@ const int E = 2;
 const int F = 1;
 const int G = 0;
  
-/definindo os pinos dos botões 1 e 2
+//definindo os pinos dos botões 1 e 2
 const int Botão1 = A0;
-const int Botao2 = A2;
+const int Botao2 = A3;
 int EstadoBotao1 = 0;
 int EstadoBotao2 = 0;
 
 voide setup(){
+//definindo os modos dos pinos dos botoes
 pinMode(A0,INPUT);
 pinMode(A3,INPUT);
-
+//definindo os modos dos pinos do display de catodo comum
 pinMOde(13,OUTPUT);
 pinMOde(12,OUTPUT);
 pinMode(11,OUTPUT);
@@ -36,7 +37,7 @@ pinMode(10,OUTPUT);
 pinMode(9,OUTPUT);
 pinMode(8,OUTPUT);
 pinMode(7,OUTPUT);
-
+//definindo os modos dos pinos do display de anodo comum
 pinMOde(6,OUTPUT);
 pinMOde(5,OUTPUT);
 pinMode(4,OUTPUT);
@@ -46,38 +47,41 @@ pinMode(1,OUTPUT);
 pinMode(0,OUTPUT);
 }
 void loop(){
-EstadoBotao1 = digitalRead(Botao1);
-EstadoBotao2 = digitalRead(Botao2);
-int i = 0;
-int j = 0;
-while( i < 10){
-    if(EstadoBotao1 == HIGH){
+EstadoBotao1 = digitalRead(Botao1);//essa variavel vai ter a informação do estado do botão1
+EstadoBotao2 = digitalRead(Botao2);//essa variaval vai ter a informação do estado do botão2
+
+int i = 0;//criando uma variavel com um valor inicial,para ajudar na contagem
+int j = 0;//criando uma variavel com um valor inicial para ajudar na contagem
+
+while( i < 10){//esse loop tem o fim de obter o numero de toques do usuario
+       if(EstadoBotao1 == HIGH){// esse loop vai checar se o botão1 foi apertado e se ele foi, será adicionar uma unidade a variavel i
        i = i + 1;
        return i;
        delay(1000);
     }
     else{
         return i;
-        while(j < 10){   
+        while(j < 10){//esse loop irá checar se o botão2 foi apertado e se ele foi será adicionar uma unidade a variavel j
             if(EstadoBotao2 == HIGH){
                  j = j + 1;
                  return j;
                  delay(1000);
              }
-             else{
+             else{//caso isso não ocorra ele deve retorna o valor de j(sendo que i foi retornado anteriormente) e quebrar o loop while.
                  return j;
                  break;
     }
 }
-int f(){
+int f(){//essa função tem o objetivo de fazer a multiplicação entre os valores obtidos pelos toques
+   //Subtrai uma unidade para obter k= 0 ou h= 0,caso um deles(botões) tenha sido apertados uma unica vez.
    k = j - 1;
    h = i - 1;
    multi = k*h;
-   decimal= int  multi/10;
-   unidade= multi-(decimal)*10;
+   decimal= int  multi/10;//para obter o valor decimal da multiplicação, dividi a multiplicação por 10
+   unidade= multi-(decimal)*10;//para obter o valor da unidade do resultado da multiplicação peguei o valor da multiplicação e subtrai pelo valor da decimal multiplicado por 10.
    return  decimal, int unidade;
 
-if(decimal == 0){
+if(decimal == 0){//display de catodo comum mostra o algarismo 0
   digitalWrite(13,HIGH);
   digitalWrite(12,HIGH);
   digitalWrite(11,HIGH);
@@ -85,8 +89,9 @@ if(decimal == 0){
   digitalWrite(9,HIGH);
   digitalWrite(8,HIGH);
   digitalWrite(7,Low);
+  delay(5000)
 }
-if(decimal == 1){
+if(decimal == 1){{//display mostra o algarismo 1
   digitalWrite(13,LOW);
   digitalWrite(12,HIGH);
   digitalWrite(11,HIGH);
@@ -94,8 +99,9 @@ if(decimal == 1){
   digitalWrite(9,LOW);
   digitalWrite(8,LOW);
   digitalWrite(7,Low);
+  delay(5000)
 }
-if(decimal == 2){
+if(decimal == 2){{//display mostra o algarismo 2
   digitalWrite(13,HIGH);
   digitalWrite(12,HIGH);
   digitalWrite(11,LOW);
@@ -103,8 +109,9 @@ if(decimal == 2){
   digitalWrite(9,HIGH);
   digitalWrite(8,LOW);
   digitalWrite(7,HIGH);
+  delay(5000)
 }
-if(decimal == 3){
+if(decimal == 3){//display mostra o algarismo 3
   digitalWrite(13,HIGH);
   digitalWrite(12,HIGH);
   digitalWrite(11,HIGH);
@@ -112,8 +119,9 @@ if(decimal == 3){
   digitalWrite(9,LOW);
   digitalWrite(8,LOW);
   digitalWrite(7,HIGH);
+  delay(5000)
 }
-if(decimal == 4){
+if(decimal == 4){//display mostra o algarismo 4
   digitalWrite(13,LOW);
   digitalWrite(12,HIGH);
   digitalWrite(11,HIGH);
@@ -121,8 +129,9 @@ if(decimal == 4){
   digitalWrite(9,LOW);
   digitalWrite(8,HIGH);
   digitalWrite(7,HIGH);
+  delay(5000)
 }
-if(decimal == 5){
+if(decimal == 5){//display mostra o algarismo 5
   digitalWrite(13,HIGH);
   digitalWrite(12,LOW);
   digitalWrite(11,HIGH);
@@ -130,8 +139,9 @@ if(decimal == 5){
   digitalWrite(9,LOW);
   digitalWrite(8,HIGH);
   digitalWrite(7,HIGH);
+  delay(5000)
 }
-if(decimal == 6){
+if(decimal == 6){//display mostra o algarismo 6
   digitalWrite(13,LOW);
   digitalWrite(12,LOW);
   digitalWrite(11,HIGH);
@@ -139,8 +149,9 @@ if(decimal == 6){
   digitalWrite(9,HIGH);
   digitalWrite(8,HIGH);
   digitalWrite(7,HIGH);
+  delay(5000)
 }
-if(decimal == 7){
+if(decimal == 7){//display mostra o algarismo 7
   digitalWrite(13,HIGH);
   digitalWrite(12,HIGH);
   digitalWrite(11,HIGH);
@@ -148,8 +159,9 @@ if(decimal == 7){
   digitalWrite(9,LOW);
   digitalWrite(8,LOW);
   digitalWrite(7,Low);
+  delay(5000)
 }
-if(decimal == 8){
+if(decimal == 8){//display mostra o algarismo 8
   digitalWrite(13,HIGH);
   digitalWrite(12,HIGH);
   digitalWrite(11,HIGH);
@@ -157,8 +169,9 @@ if(decimal == 8){
   digitalWrite(9,HIGH);
   digitalWrite(8,HIGH);
   digitalWrite(7,HIGH);
+  delay(5000)
 }
-if(decimal == 9){
+if(decimal == 9){//display mostra o algarismo 9
   digitalWrite(13,HIGH);
   digitalWrite(12,HIGH);
   digitalWrite(11,HIGH);
@@ -166,9 +179,10 @@ if(decimal == 9){
   digitalWrite(9,LOW);
   digitalWrite(8,HIGH);
   digitalWrite(7,HIGH);
+  delay(5000)
 }
 
-if(unidade == 0){
+if(unidade == 0){//display mostra o algarismo 0
   digitalWrite(6,HIGH);
   digitalWrite(5,HIGH);
   digitalWrite(4,HIGH);
@@ -176,8 +190,9 @@ if(unidade == 0){
   digitalWrite(2,HIGH);
   digitalWrite(1,HIGH);
   digitalWrite(0,Low);
+  delay(5000)
 }
-if(unidade == 1){
+if(unidade == 1){//display mostra o algarismo 1
   digitalWrite(6,LOW);
   digitalWrite(5,HIGH);
   digitalWrite(4,HIGH);
@@ -185,8 +200,9 @@ if(unidade == 1){
   digitalWrite(2,LOW);
   digitalWrite(1,LOW);
   digitalWrite(0,Low);
+  delay(5000)
 }
-if(unidade == 2){
+if(unidade == 2){//display mostra o algarismo 2
   digitalWrite(6,HIGH);
   digitalWrite(5,HIGH);
   digitalWrite(4,LOW);
@@ -194,8 +210,9 @@ if(unidade == 2){
   digitalWrite(2,HIGH);
   digitalWrite(1,LOW);
   digitalWrite(0,HIGH);
+  delay(5000)
 }
-if(unidade == 3){
+if(unidade == 3){//display mostra o algarismo 3
   digitalWrite(6,HIGH);
   digitalWrite(5,HIGH);
   digitalWrite(4,HIGH);
@@ -203,8 +220,9 @@ if(unidade == 3){
   digitalWrite(2,LOW);
   digitalWrite(1,LOW);
   digitalWrite(0,HIGH);
+  delay(5000)
 }
-if(unidade == 4){
+if(unidade == 4){//display mostra o algarismo 4
   digitalWrite(6,LOW);
   digitalWrite(5,HIGH);
   digitalWrite(4,HIGH);
@@ -212,8 +230,9 @@ if(unidade == 4){
   digitalWrite(2,LOW);
   digitalWrite(1,HIGH);
   digitalWrite(0,HIGH);
+  delay(5000)
 }
-if(unidade == 5){
+if(unidade == 5){//display mostra o algarismo 5
   digitalWrite(6,HIGH);
   digitalWrite(5,LOW);
   digitalWrite(4,HIGH);
@@ -221,8 +240,9 @@ if(unidade == 5){
   digitalWrite(2,LOW);
   digitalWrite(1,HIGH);
   digitalWrite(0,HIGH);
+  delay(5000)
 }
-if(unidade == 6){
+if(unidade == 6){//display mostra o algarismo 6
   digitalWrite(6,LOW);
   digitalWrite(5,LOW);
   digitalWrite(4,HIGH);
@@ -230,8 +250,9 @@ if(unidade == 6){
   digitalWrite(2,HIGH);
   digitalWrite(1,HIGH);
   digitalWrite(0,HIGH);
+  delay(5000)
 }
-if(unidade == 7){
+if(unidade == 7){//display mostra o algarismo 7
   digitalWrite(6,HIGH);
   digitalWrite(5,HIGH);
   digitalWrite(4,HIGH);
@@ -239,8 +260,9 @@ if(unidade == 7){
   digitalWrite(2,LOW);
   digitalWrite(1,LOW);
   digitalWrite(0,Low);
+  delay(5000)
 }
-if(unidade == 8){
+if(unidade == 8){//display mostra o algarismo 8
   digitalWrite(6,HIGH);
   digitalWrite(5,HIGH);
   digitalWrite(4,HIGH);
@@ -248,8 +270,9 @@ if(unidade == 8){
   digitalWrite(2,HIGH);
   digitalWrite(1,HIGH);
   digitalWrite(0,HIGH);
+  delay(5000)
 }
-if(unidade == 9){
+if(unidade == 9){display mostra o algarismo 9
   digitalWrite(6,HIGH);
   digitalWrite(5,HIGH);
   digitalWrite(4,HIGH);
@@ -257,6 +280,7 @@ if(unidade == 9){
   digitalWrite(2,LOW);
   digitalWrite(1,HIGH);
   digitalWrite(0,HIGH);
+  delay(5000)
 }
 }
 
